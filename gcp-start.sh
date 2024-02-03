@@ -12,6 +12,9 @@ crontab /etc/cron.d/gcs-hourly-backup
 # Start cron so it runs auto backups
 cron
 
+# Authenticate to GCS
+gcloud auth activate-service-account --key-file=/gcs-key.json
+
 # Copy files from GCS to /root (so /root/Zomboid is there)
 # gsutil -m cp -r gs://$GCS_BUCKET$GCS_BUCKET_PATH/ /root
 
