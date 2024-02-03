@@ -5,4 +5,5 @@
 
 /steam/steamcmd.sh +force_install_dir /projectzomboid +login anonymous +app_update 380870 validate +quit
 
-/bin/bash
+# config files in /root/Zomboid
+/projectzomboid/start-server.sh
