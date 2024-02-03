@@ -16,6 +16,9 @@ cron
 gcloud auth activate-service-account --key-file=/gcs-key.json
 
 # Copy files from GCS to /root (so /root/Zomboid is there)
-# gsutil -m cp -r gs://$GCS_BUCKET$GCS_BUCKET_PATH/ /root
+gsutil -m cp -r gs://$GCS_BUCKET$GCS_BUCKET_PATH/ /root
 
 /run.sh
+
+# Copy files again once the server is done
+gsutil -m cp -r /root/Zomboid gs://$GCS_BUCKET$GCS_BUCKET_PATH/
