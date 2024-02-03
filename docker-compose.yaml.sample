@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  projectzomboidgcp:
+    image: gitea.findlayis.me/chuck/projectzomboid-docker-gcp:latest
+    container_name: projectzomboidgcp
+    ports:
+      - "16261:16261/udp"
+      - "16262:16262/udp"
+    restart: unless-stopped
+    volumes:
+      - gcs-key.json:/gcs-key.json
+    environment:
+      GCS_BUCKET: "bucket"
+      GCS_BUCKET_PATH: "/projectzomboid"
