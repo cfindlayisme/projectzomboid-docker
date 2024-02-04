@@ -3,4 +3,4 @@
 - `GCP_BUCKET_PATH`: GCP bucket path
 
 ## Volumes
-- `/gck-key.json` JSON key with storage writing and reading roles to bucket
+- `/gcs-key.json` JSON key with storage writing and reading roles to bucket
