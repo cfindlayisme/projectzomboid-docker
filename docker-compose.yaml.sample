@@ -10,7 +10,7 @@ services:
       - "16262:16262/udp"
     restart: unless-stopped
     volumes:
-      - gcs-key.json:/gcs-key.json
+      - ./gcs-key.json:/gcs-key.json:ro
     environment:
       GCS_BUCKET: "bucket"
       GCS_BUCKET_PATH: "/projectzomboid"
