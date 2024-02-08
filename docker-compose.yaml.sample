@@ -11,6 +11,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./gcs-key.json:/gcs-key.json:ro
+      - ./data:/root/Zomboid
     environment:
       GCS_BUCKET: "bucket"
       GCS_BUCKET_PATH: "/projectzomboid"
