@@ -3,7 +3,7 @@ version: "3"
 services:
 
   projectzomboidgcp:
-    image: gitea.findlayis.me/chuck/projectzomboid-docker-gcp:latest
+    image: ghcr.io/cfindlayisme/projectzomboid-docker:gcp
     container_name: projectzomboidgcp
     ports:
       - "16261:16261/udp"
